@@ -7,7 +7,7 @@
     overflow: hidden;
     white-space: nowrap;
 }
-
+/* 
 @media (min-width : 600px) {
     .FileList .File {
         float: left;
@@ -19,4 +19,4 @@
         float: left;
         width: 25%;
     }
-}
+} */

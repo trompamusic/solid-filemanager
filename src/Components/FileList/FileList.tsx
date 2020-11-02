@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+
 import File from '../File/File'; 
 import FileListEmptyMessage from './FileListEmptyMessage';
 import Loader from '../Loader/Loader'; 
@@ -10,15 +14,24 @@ import { AppState } from '../../Reducers/reducer';
 class FileList extends Component<FileListProps> {
     render() {
         const { items, isLoading } = this.props;
-        const itemComponents = items.map((item, key) => {
-            return <File item={item} key={key} />;
-        });
 
         return <div className="FileList">
-            { isLoading ? 
-                <Loader /> : 
-                itemComponents.length ? itemComponents : <FileListEmptyMessage />
-            }
+            { isLoading && <Loader />}
+            { !items.length && <FileListEmptyMessage />}
+            { items.length && (
+                <div>
+                    <Typography variant="h6">
+                        Avatar with text
+                    </Typography>
+                    <div >
+                        <List dense={true}>
+                            {items.map((item, key) => 
+                                <File item={item} key={key} />
+                            )}
+                        </List>
+                    </div>
+                </div>
+            )}
         </div>
     }
 }

@@ -219,7 +219,7 @@ export const copyItems = async (path: string, destination: string, filenames: st
             createPath: true,
             merge: SolidFileClient.MERGE.REPLACE
         }))
-        .flat(1) as Response[]
+        .flat(1) as unknown as Response[]
     
     return Promise.all(promises).catch(handleFetchError);
 };
@@ -268,7 +268,7 @@ export const getAsZip = (path: string, itemList: Item[]): Promise<JSZip> => {
 const addItemsToZip = (zip: JSZip, path: string, itemList: Item[]): Promise<void[]> => {
     const promises = itemList.map(async item => {
         if (item instanceof FolderItem) {
-            const zipFolder = zip.folder(item.name);
+            const zipFolder = zip.folder(item.name) as JSZip;
             const folderPath = `${path}/${item.name}`;
             const folderItems = await getItemList(folderPath);
             await addItemsToZip(zipFolder, folderPath, folderItems);

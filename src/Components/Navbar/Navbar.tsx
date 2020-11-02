@@ -82,7 +82,7 @@ function SearchAppBar(props: SearchAppBarProps) {
   const { classes, path, filter, moveUpwards, canGoBack, handleChange, handleRefresh } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="relative">
         <Toolbar>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             <BreadcrumbText 

@@ -1,9 +1,9 @@
 .File {
     cursor: pointer;
-    float: left;
-    display: block;
     width: 100%;
-    user-select: none;
+    /* float: left; */
+    /* display: block; */
+    /* user-select: none; */
 }
 
 .File:hover {
@@ -13,7 +13,6 @@
 
 .File[data-selected=true] {
     background-color: #e8f0fe;
-    
 }
 
 .File[data-selected=true],
