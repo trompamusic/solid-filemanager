@@ -10,6 +10,7 @@
     "filemanager",
     "solid"
   ],
+  "main": "dist/cjs/Wrapper.js",
   "author": "A_A",
   "license": "MIT",
   "bugs": {
