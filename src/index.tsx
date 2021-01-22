@@ -23,12 +23,12 @@ ReactDOM.render(
 serviceWorker.register({
     onUpdate: (config) => {
         console.group('serviceWorker.onUpdate');
-        console.log(config);
+        // console.log(config);
         console.groupEnd();
     },
     onSuccess: (config) => {
         console.group('serviceWorker.onSuccess');
-        console.log(config);
+        // console.log(config);
         console.groupEnd();
     }
 });

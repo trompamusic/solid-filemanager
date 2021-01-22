@@ -43,7 +43,7 @@ class FormDialog extends Component<ChooseLocationProps> {
                 return;
             }
         }
-        console.log("Couldn't find location input");
+        // console.log("Couldn't find location input");
     }
 
     handleSubmit(event: DialogButtonClickEvent) {

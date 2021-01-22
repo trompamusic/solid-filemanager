@@ -12,7 +12,6 @@ export type MyThunk = ThunkAction<void, AppState, null, Action<any>>;
 export type MyDispatch = ThunkDispatch<AppState, null, Action<any>>;
 
 export const initApp = (): MyThunk => (dispatch, getState) => {
-    console.log(`Starting Solid-Filemanager v${version}`);
     dispatch(updateLoginStatus());
     dispatch(openDialog(DIALOGS.CHOOSE_LOCATION));
 };
