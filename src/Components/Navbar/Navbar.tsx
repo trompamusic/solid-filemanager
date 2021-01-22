@@ -1,5 +1,4 @@
 import React, { ChangeEvent } from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +17,7 @@ import { AppState } from '../../Reducers/reducer';
 const styles = (theme: Theme) => createStyles({
   root: {
     width: '100%',
-    marginBottom: '4.3em'
+    marginBottom: '1em'
   },
   grow: {
     flexGrow: 1,
@@ -82,7 +81,7 @@ function SearchAppBar(props: SearchAppBarProps) {
   const { classes, path, filter, moveUpwards, canGoBack, handleChange, handleRefresh } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="relative">
+      <AppBar position="relative" color="primary">
         <Toolbar>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             <BreadcrumbText 
@@ -148,7 +147,7 @@ const mapDispatchToProps = (dispatch: MyDispatch): DispatchProps => {
             dispatch(filterItems(event.currentTarget.value));
         },
         moveUpwards: (n) => {
-          console.log('moveUpwards', n);
+          // console.log('moveUpwards', n);
           dispatch(moveFolderUpwardsAndRefresh(n));
         },
         handleRefresh: () => dispatch(refreshItemList())

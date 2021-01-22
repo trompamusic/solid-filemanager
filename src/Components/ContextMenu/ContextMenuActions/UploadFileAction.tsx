@@ -22,7 +22,7 @@ function UploadFileAction(props: UploadFileActionProps) {
                 <CloudUploadIcon />
             </ListItemIcon>
             <Typography variant="inherit">
-                Upload files
+                Upload file
             </Typography>
         </MenuItem>        
     );
