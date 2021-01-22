@@ -1,3 +1,38 @@
+# Solid filemanager (forked)
+This repository is a fork from the solid-filemanager by Otto-AA, with some minor changes:
+- Adding a postMessage when an item is selected, for when using inside an iframe
+- Disabled some features (such as 'create file') to present a minimized version, focussing on file selection and upload
+
+## Usage in iframe
+
+```jsx
+const MyContainer = () => {
+
+  useEffect(() => {
+    const iframeListener = ({ data: { selectedItem } }) => {
+      if(!selectedItem) return;
+
+      const { name, url, path, size, isFolder } = selectedItem;
+    };
+
+    window.addEventListener('message', iframeListener); 
+
+    return () => window.removeEventListener('message', iframeListener);
+  }, []);
+
+  return (
+    <iframe src={"http://solidbrowserurl/"} title={"Solid pod filebrowser"} />
+  );
+}
+
+```
+
+
+Original readme below.
+Source: https://github.com/Otto-AA/solid-filemanager
+
+
+
 **NOTE: Some things may be broken currently.** There are some changes which still needs to be tested and probably fixed. Due to the current situation I will wait with this until solid-file-client is ready which should (hopefully) be ready this September. Then I will start switching to use solid-file-client and check again everything for errors and compatibility with the inrupt.net and solid.community servers. **I expect everything to work by the end of October**. I am sorry for any inconvenience caused by this.
 
 # Solid Filemanager
