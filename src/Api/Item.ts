@@ -5,7 +5,7 @@ export class Item {
     _name: string;
     _path: string[];
     _url: string;
-    _size?: string
+    _size?: string;
 
     constructor(url: string, size?: string) {
         const path = getPathFromUrl(url);

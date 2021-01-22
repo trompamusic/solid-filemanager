@@ -5,19 +5,22 @@ import ContextMenu from './Components/ContextMenu/ContextMenu';
 import Dialogs from './Components/Dialogs/Dialogs';
 
 import { MuiThemeProvider as MaterialUI, createMuiTheme, WithStyles } from '@material-ui/core/styles';
-import { Dialog, Button } from '@material-ui/core';
 
-import blue from '@material-ui/core/colors/blue';
 import { connect } from 'react-redux';
 import { initApp, MyDispatch, closeContextMenu, selectItem } from './Actions/Actions';
 import DynamicSnackbar from './Components/Notification/DynamicSnackbar';
 import HistoryHandler from './Components/HistoryHandler/HistoryHandler';
 import { AppState } from './Reducers/reducer';
-import { FileItem, Item } from './Api/Item';
+import { FolderItem, Item } from './Api/Item';
 
 const theme = createMuiTheme({
     palette: {
-        primary: blue,
+        primary: {
+            main: '#2B44FF',
+        },
+        secondary: {
+            main: '#ea6135',
+        },
     },
     typography: {
         useNextVariants: true,
@@ -32,38 +35,33 @@ class App extends Component<AppProps> {
     componentDidMount() {
         this.props.init();
     };
+    componentDidUpdate(prevProps: StateProps){
+        if(prevProps.selectedItem !== this.props.selectedItem){
+            this.postMessage();
+        }
+    }
+    postMessage(){
+        const { selectedItem } = this.props;
+
+        const item: selectedItem|undefined = selectedItem?
+            {
+                name     : selectedItem._name,
+                path     : selectedItem._path,
+                url      : selectedItem._url,
+                size     : selectedItem._size,
+                isFolder : selectedItem instanceof FolderItem,
+            }: undefined
+
+        window.parent.postMessage({ selectedItem: item }, "*");
+    }
     searchFile(val:any){
         this.setState({dialogOpen:val});
     }
 
     render() {
-
-        const { selectedItem } = this.props;
-        const isFileSelected = selectedItem instanceof FileItem;
-        console.log(isFileSelected, selectedItem);
-
         return (
             <div className="App">
-                {/* <div style={{ display:'flex', justifyContent:'center', alignItems:'center', padding: 100}}>
-                    {!isFileSelected && 
-                        <Button onClick={e =>this.searchFile(true)}>Select a score from your Solid pod</Button>
-                    }
-                    {isFileSelected && 
-                        <div>
-                            <p>{`Filename: ${selectedItem._name}`}</p>
-                            <p>{"Score URL: "}
-                                <span 
-                                    style={{fontWeight:'bold', cursor:'pointer'}} 
-                                    onClick={e => window.location.href=selectedItem.url}>
-                                        {selectedItem._url}
-                                </span>
-                            </p>
-                        </div>
-
-                    }
-                </div> */}
-                {/* <Dialog open={true}> */}
-                    {/* <MaterialUI theme={theme}> */}
+                <MaterialUI theme={theme}>
                     <div onClick={this.props.handleHideContextMenu} onContextMenu={this.props.handleHideContextMenu}>
                         <Navbar />
                         <FileList />
@@ -71,9 +69,8 @@ class App extends Component<AppProps> {
                         <DynamicSnackbar />
                         <Dialogs />
                     </div>
-                    {/* </MaterialUI> */}
-                    <HistoryHandler />
-                {/* </Dialog> */}
+                </MaterialUI>
+                <HistoryHandler />
             </div>
         );
     }
@@ -84,6 +81,14 @@ interface StateProps {
 interface DispatchProps {
     init(): void;
     handleHideContextMenu(event: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
+}
+
+interface selectedItem {
+    name    : string;
+    path    : string[];
+    url     : string;
+    size?   : string;
+    isFolder: boolean;
 }
 
 interface AppProps extends StateProps, DispatchProps {};
