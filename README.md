@@ -2,6 +2,7 @@
 This repository is a clone from the solid-filemanager by Otto-AA, with some minor changes:
 - Adding a postMessage when an item is selected, for when using inside an iframe
 - Disabled some features (such as 'create file') to present a minimized version, focussing on file selection and upload
+- Some styling updates
 
 ## Usage in iframe
 
