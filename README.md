@@ -1,5 +1,5 @@
-# Solid filemanager (forked)
-This repository is a fork from the solid-filemanager by Otto-AA, with some minor changes:
+# Solid filemanager (cloned)
+This repository is a clone from the solid-filemanager by Otto-AA, with some minor changes:
 - Adding a postMessage when an item is selected, for when using inside an iframe
 - Disabled some features (such as 'create file') to present a minimized version, focussing on file selection and upload
 
