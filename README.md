@@ -27,7 +27,7 @@ const MyContainer = () => {
 }
 
 ```
-
+--------
 
 Original readme below.
 Source: https://github.com/Otto-AA/solid-filemanager
