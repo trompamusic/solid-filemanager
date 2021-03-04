@@ -42,7 +42,7 @@ If you want to modify the app, make sure you've installed git, node and npm. The
 
 ```shell
 git clone https://github.com/trompamusic/solid-filemanager/ # Downloads the source
-cd solid-filemenager                                        # Enter the directory
+cd solid-filemanager                                        # Enter the directory
 npm install                                                 # Install dependencies
 npm start                                                   # Start the development app
 ```
