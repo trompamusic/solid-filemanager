@@ -7,12 +7,12 @@ This repository is a clone of the [solid-filemanager](https://github.com/Otto-AA
 - Disabled some features (such as 'create file') to present a minimized version, focussing on file selection and upload only
 - Updated some styling for use within Trompa projects, such as the [Trompa Campaign Manager](https://github.com/trompamusic/trompa-campaign-manager).
 
-## Hosted within Trompa project
-
 The Solid filemanager is hosted by Videodock for use within Trompa projects:
 [solidpodbrowser.trompamusic.eu](http://solidpodbrowser.trompamusic.eu)
 
-## Usage in an iframe within a React application
+## Usage
+
+Usage in an iframe within a React application
 
 ```jsx
 const MyContainer = () => {
