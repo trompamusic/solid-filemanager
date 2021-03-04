@@ -3,9 +3,9 @@
 A React-based Solid pod filebrowser with iframe support.
 
 This repository is a clone of the [solid-filemanager](https://github.com/Otto-AA/solid-filemanager) by Otto-AA, with some minor changes:
-- Adding a postMessage to the parent window when an item is selected, to support using the filemanager inside an iframe of another application
-- Disabling some features (such as 'create file') to present a minimized version, focussing on file selection and upload only
-- Some styling updates for use within Trompa projects, such as the [Trompa Campaign Manager](https://github.com/trompamusic/trompa-campaign-manager).
+- Added a postMessage to the parent window when an item is selected, to support using the filemanager inside an iframe of another application
+- Disabled some features (such as 'create file') to present a minimized version, focussing on file selection and upload only
+- Updated some styling for use within Trompa projects, such as the [Trompa Campaign Manager](https://github.com/trompamusic/trompa-campaign-manager).
 
 ## Hosted within Trompa project
 
