@@ -38,7 +38,7 @@ const MyContainer = () => {
 ```
 
 ## Modifying the app
-Make sure you've installed git, node and npm. Then enter following commands:
+Make sure you've installed git, node and npm. Then enter the following commands:
 
 ```shell
 git clone https://github.com/trompamusic/solid-filemanager/ # Downloads the source
