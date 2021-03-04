@@ -41,11 +41,10 @@ const MyContainer = () => {
 If you want to modify the app, make sure you've installed git, node and npm. Then enter following commands:
 
 ```shell
-git clone https://github.com/otto-aa/solid-filemanager/ # Downloads the source
-cd solid-filemenager                                    # Enter the directory
-npm install                                             # Install dependencies
-npm start                                               # Start the development app
-# Make changes to the source code now
+git clone https://github.com/trompamusic/solid-filemanager/ # Downloads the source
+cd solid-filemenager                                        # Enter the directory
+npm install                                                 # Install dependencies
+npm start                                                   # Start the development app
 ```
 
 ## Hosting
