@@ -36,3 +36,16 @@ const MyContainer = () => {
 }
 
 ```
+
+## Developing
+If you want to modify the app, make sure you've installed git, node and npm. Then enter following commands:
+
+'''
+git clone https://github.com/otto-aa/solid-filemanager/ # Downloads the source
+cd solid-filemenager                                    # Enter the directory
+npm install                                             # Install dependencies
+npm start                                               # Start the development app
+'''
+
+## Hosting
+Run a react build from this repository and deploy to a server.
