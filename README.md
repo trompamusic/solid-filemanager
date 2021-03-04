@@ -1,4 +1,4 @@
-# Solid filemanager (cloned)
+# Solid filemanager
 
 A React-based Solid pod filebrowser with iframe support.
 
