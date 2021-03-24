@@ -207,7 +207,7 @@ export const copyItems = async (path: string, destination: string, filenames: st
     const items = await getItemList(path)
         .then(items => items.filter(({ name }) => filenames.includes(name)))
     const promises = items.map(item => item instanceof FolderItem ?
-        fileClient.copyFolder(buildFolderUrl(path, item.name), buildFolderUrl(destination, name), {
+        fileClient.copyFolder(buildFolderUrl(path, item.name), buildFolderUrl(destination, item.name), {
             withAcl: false,
             withMeta: true,
             createPath: true,
@@ -217,7 +217,7 @@ export const copyItems = async (path: string, destination: string, filenames: st
             withAcl: false,
             withMeta: true,
             createPath: true,
-            merge: SolidFileClient.MERGE.REPLACE
+            merge: SolidFileClient.MERGE.REPLACE,
         }))
         .flat(1) as unknown as Response[]
     
@@ -234,9 +234,9 @@ export const uploadFiles = async (path: string, fileList: FileList): Promise<Res
     if (!fileList.length) {
         return Promise.reject('No files to upload');
     }
-    const promises = Array.from(fileList).map(file => {
-      const contentType = file.type || guessContentType(file.name, file)
-      return updateFile(path, file.name, file, file.type)
+    const promises =  Array.from(fileList).map(file =>  {
+        //const contentType = guessContentType(file.name, file) || file.type;
+        return updateFile(path, file.name, file, file.type);
     });
     return Promise.all(promises).catch(handleFetchError);
 };
