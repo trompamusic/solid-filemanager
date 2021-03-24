@@ -59,7 +59,7 @@ class FormDialog extends Component<ChooseLocationProps> {
     render() {
         let { location } = this.state;
         location = location ? location : '';
-        const { handleClose, handleLogin, handleLogout, open, isLoggedIn, webId } = this.props;
+        const { handleClose, handleLogin, handleLogout, open, isLoggedIn } = this.props;
 
         return (
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-choose-location" fullWidth={true} maxWidth={'sm'}>
