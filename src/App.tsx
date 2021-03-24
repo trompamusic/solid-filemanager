@@ -4,10 +4,10 @@ import Navbar from './Components/Navbar/Navbar';
 import ContextMenu from './Components/ContextMenu/ContextMenu';
 import Dialogs from './Components/Dialogs/Dialogs';
 
-import { MuiThemeProvider as MaterialUI, createMuiTheme, WithStyles } from '@material-ui/core/styles';
+import { MuiThemeProvider as MaterialUI, createMuiTheme } from '@material-ui/core/styles';
 
 import { connect } from 'react-redux';
-import { initApp, MyDispatch, closeContextMenu, selectItem } from './Actions/Actions';
+import { initApp, MyDispatch, closeContextMenu } from './Actions/Actions';
 import DynamicSnackbar from './Components/Notification/DynamicSnackbar';
 import HistoryHandler from './Components/HistoryHandler/HistoryHandler';
 import { AppState } from './Reducers/reducer';
@@ -52,7 +52,7 @@ class App extends Component<AppProps> {
                 isFolder : selectedItem instanceof FolderItem,
             }: undefined
 
-        window.parent.postMessage({ selectedItem: item }, "*");
+        window.parent && window.parent.postMessage({ selectedItem: item }, "*");
     }
     searchFile(val:any){
         this.setState({dialogOpen:val});
