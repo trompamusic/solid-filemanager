@@ -5,8 +5,6 @@ import { Action, SET_LOGGED_IN, SET_LOGGED_OUT, SET_HOST, SET_ITEMS, SET_WEB_ID,
 import { AppState } from '../Reducers/reducer';
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { guessContentType } from '../Api/contentTypes';
-import { version } from '../../package.json';
-
 
 export type MyThunk = ThunkAction<void, AppState, null, Action<any>>;
 export type MyDispatch = ThunkDispatch<AppState, null, Action<any>>;
