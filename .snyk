@@ -1510,3 +1510,9 @@ patch:
         patched: '2021-03-18T15:56:25.363Z'
     - react-scripts > jest > jest-cli > jest-runner > jest-runtime > jest-config > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
         patched: '2021-03-18T15:56:25.363Z'
+    - react-scripts > eslint-plugin-testing-library > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2021-03-25T03:34:11.065Z'
+    - solid-auth-client > @solid/oidc-rp > @solid/jose > isomorphic-webcrypto > @unimodules/react-native-adapter > lodash:
+        patched: '2021-03-25T03:34:11.065Z'
+    - rdflib > solid-auth-client > @solid/oidc-rp > @solid/jose > isomorphic-webcrypto > @unimodules/react-native-adapter > lodash:
+        patched: '2021-03-25T03:34:11.065Z'
