@@ -13,9 +13,9 @@ The Solid filemanager is hosted by Videodock for use within Trompa projects:
 
 More info about the Trompa project at: [trompamusic.eu](https://trompamusic.eu/)
 
-This repository uses [green-licensed](https://github.com/google/js-green-licenses) dependencies and a couple non-green open source licensed dependencies:
+This repository uses [green-licensed](https://github.com/google/js-green-licenses) dependencies and a couple non-green licensed open source dependencies:
 language-subtag-registry@0.3.21 (ODC-By-1.0)
-rework@1.0.1, used by react-scripts (no license) 
+rework@1.0.1 (no license, used by react-scripts) 
 standard-http-error@2.0.1 (LAGPL)
 standard-error@1.1.0 (LAGPL)
 
