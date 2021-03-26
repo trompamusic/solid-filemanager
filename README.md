@@ -11,6 +11,14 @@ This repository is a clone of the [solid-filemanager](https://github.com/Otto-AA
 The Solid filemanager is hosted by Videodock for use within Trompa projects:
 [solidpodbrowser.trompamusic.eu](http://solidpodbrowser.trompamusic.eu)
 
+More info about the Trompa project at: [trompamusic.eu](https://trompamusic.eu/)
+
+This repository uses [green-licensed](https://github.com/google/js-green-licenses) dependencies and a couple non-green open source licensed dependencies:
+language-subtag-registry@0.3.21 (ODC-By-1.0)
+rework@1.0.1, used by react-scripts (no license) 
+standard-http-error@2.0.1 (LAGPL)
+standard-error@1.1.0 (LAGPL)
+
 ## Usage
 
 Usage in an iframe within a React application
