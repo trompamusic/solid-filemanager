@@ -29,7 +29,7 @@
     "@types/node": "^11.15.47",
     "@types/rdflib": "^0.17.1",
     "@types/react": "^16.14.4",
-    "@types/react-dom": "^16.9.7",
+    "@types/react-dom": "^16.9.11",
     "@types/react-plyr": "^2.1.0",
     "@types/react-redux": "^7.1.16",
     "gh-pages": "^2.2.0",
