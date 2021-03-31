@@ -32,8 +32,8 @@
     "@types/react-plyr": "^2.1.0",
     "@types/react-redux": "^7.1.16",
     "history": "^4.10.1",
-    "jszip": "^3.4.0",
-    "mime": "^2.5.2",
+    "jszip": "^3.6.0",
+    "mime": "^2.5.2",§
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-plyr": "^2.2.0",
