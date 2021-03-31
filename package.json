@@ -34,7 +34,7 @@
     "@types/react-redux": "^7.1.16",
     "gh-pages": "^2.2.0",
     "history": "^4.10.1",
-    "jszip": "^3.4.0",
+    "jszip": "^3.6.0",
     "mime": "^2.4.4",
     "plyr": "^3.5.10",
     "rdflib": "^0.19.1",
