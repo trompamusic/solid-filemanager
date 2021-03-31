@@ -42,7 +42,7 @@
     "react-dom": "^16.13.1",
     "react-plyr": "^2.2.0",
     "react-redux": "^6.0.1",
-    "react-scripts": "^4.0.0",
+    "react-scripts": "^4.0.3",
     "redux": "^4.0.5",
     "redux-thunk": "~2.3.0",
     "solid-auth-client": "^2.5.3",
