@@ -1,7 +1,6 @@
 import React from 'react';
 import DialogMenu from './Menu/Menu';
 import DialogContent from './Content/Content';
-import DialogMedia from './Media/Media';
 import DialogEdit from './Edit/Edit';
 import DialogCreateFolder from './CreateFolder/CreateFolder';
 import DialogCreateFile from './CreateFile/CreateFile';
@@ -16,7 +15,6 @@ function Dialogs() {
         <div className="Dialogs">
             <DialogMenu />
             <DialogContent />
-            <DialogMedia />
             <DialogEdit />
             <DialogCreateFolder />
             <DialogCreateFile />
