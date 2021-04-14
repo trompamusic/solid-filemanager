@@ -45,7 +45,7 @@
     "solid-file-client": "^1.2.4",
     "typeface-roboto": "0.0.54",
     "typescript": "^3.9.9",
-    "snyk": "^1.509.0"
+    "snyk": "^1.538.0"
   },
   "scripts": {
     "start": "react-scripts start",
