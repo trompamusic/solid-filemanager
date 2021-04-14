@@ -1516,3 +1516,21 @@ patch:
         patched: '2021-03-25T03:34:11.065Z'
     - rdflib > solid-auth-client > @solid/oidc-rp > @solid/jose > isomorphic-webcrypto > @unimodules/react-native-adapter > lodash:
         patched: '2021-03-25T03:34:11.065Z'
+    - react-scripts > @typescript-eslint/eslint-plugin > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > eslint-plugin-flowtype > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > html-webpack-plugin > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > webpack-manifest-plugin > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > eslint-plugin-testing-library > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - react-scripts > webpack-dev-server > portfinder > async > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
+    - solid-auth-client > @solid/oidc-rp > @solid/jose > isomorphic-webcrypto > @unimodules/react-native-adapter > lodash:
+        patched: '2021-04-14T06:56:29.703Z'
