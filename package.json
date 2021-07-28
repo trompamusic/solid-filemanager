@@ -32,7 +32,7 @@
     "@types/react-plyr": "^2.1.0",
     "@types/react-redux": "^7.1.16",
     "history": "^4.10.1",
-    "jszip": "^3.6.0",
+    "jszip": "^3.7.0",
     "mime": "^2.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -45,7 +45,7 @@
     "solid-file-client": "^1.2.4",
     "typeface-roboto": "0.0.54",
     "typescript": "^3.9.9",
-    "snyk": "^1.509.0"
+    "snyk": "^1.667.0"
   },
   "scripts": {
     "start": "react-scripts start",
