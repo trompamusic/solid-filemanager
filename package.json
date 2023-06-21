@@ -38,14 +38,14 @@
     "react-dom": "^16.13.1",
     "react-plyr": "^2.2.0",
     "react-redux": "^6.0.1",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "redux": "^4.0.5",
     "redux-thunk": "~2.3.0",
     "solid-auth-client": "^2.5.3",
     "solid-file-client": "^1.2.4",
     "typeface-roboto": "0.0.54",
     "typescript": "^3.9.9",
-    "snyk": "^1.509.0"
+    "snyk": "^1.685.0"
   },
   "scripts": {
     "start": "react-scripts start",
